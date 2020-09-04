@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   get "/users", to: "users#index", as: "users"
 
   get "/signups", to: "signups#index", as: "signups"
-  
+
   get "/places", to: "places#index", as: "places"
+
+  get "/favorites", to: "favorites#index", as: "favorites"
+
+  get "/categories", to: "categories#index", as: "categories"
 end
