@@ -13,11 +13,17 @@ Rails.application.routes.draw do
 
 ################################## PLACES ###############################
   get "/places", to: "places#index", as: "places"
+  get "/places/new", to: "places#new", as: "new_place"
+  post "/places", to: "places#create"
+  get "/places/:id", to: "places#show", as: "place"
 
 ################################## FAVORITES ###############################
   get "/favorites", to: "favorites#index", as: "favorites"
 
 ################################## CATEGORIES ###############################
   get "/categories", to: "categories#index", as: "categories"
+  get "/categories/new", to: "categories#new", as: "new_category"
+  post "/categories", to: "categories#create"
+  get "/categories/:id", to: "categories#show", as: "category"
   
 end
