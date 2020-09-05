@@ -4,12 +4,6 @@ class UsersController < ApplicationController
         @users = User.all
     end
 
-    def show
-        @user = User.find(params[:id])
-        #we can set up another helper method so we know @user
-        #we can implicitely return
-    end
-
     def new
         @user = User.new
     end
@@ -22,6 +16,12 @@ class UsersController < ApplicationController
             flash[:errors] = @user.errors.full_messages
             redirect_to new_user_path
         end
+    end
+
+    def show
+        @user = User.find(params[:id])
+        #we can set up another helper method so we know @user
+        #we can implicitely return
     end
 
     private

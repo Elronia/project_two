@@ -7,6 +7,6 @@ class User < ApplicationRecord
 
     validates :first_name, presence: true
     validates :last_name, presence: true
-    validates :my_email_attribute, email: true #check how to validate email
+    validates :email_address, email: true #check how to validate email
     
 end
