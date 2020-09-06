@@ -22,8 +22,8 @@ Rails.application.routes.draw do
 
 ################################## CATEGORIES ###############################
   get "/categories", to: "categories#index", as: "categories"
-  get "/categories/new", to: "categories#new", as: "new_category"
-  post "/categories", to: "categories#create"
-  get "/categories/:id", to: "categories#show", as: "category"
+  # get "/categories/new", to: "categories#new", as: "new_category"
+  # post "/categories", to: "categories#create"
+  # get "/categories/:id", to: "categories#show", as: "category"
   
 end
