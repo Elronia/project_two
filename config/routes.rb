@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
 ################################## SIGNUPS ###############################
   get "/signups", to: "signups#index", as: "signups"
+  get "/signups/new", to: "signups#new", as: "new_signup"
+  post "/signups", to: "signups#create"
 
 ################################## PLACES ###############################
   get "/places", to: "places#index", as: "places"
