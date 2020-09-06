@@ -2,6 +2,14 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root "homepage#home" 
 
+  # # GET THE USER THE LOGIN FORM
+  # get "/login", to: "users#login", as: "login"
+  # # HANDLE THE LOGIN FORM SUBMISSION
+  # post "/send_the_form_here", to: "users#handle_login"
+  get "signup", to: "users#new", as: "signup"
+  get "login", to: "sessions#new", as: "login"
+  post "sessions", to: "sessions#create", as: "sessions"
+
 ################################## USERS ###############################
   get "/users", to: "users#index", as: "users"
   get "/users/new", to: "users#new", as: "new_user"
